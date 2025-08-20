@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: 📥 Checkout code
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
       
     - name: 📦 Setup Node.js
       uses: actions/setup-node@v4
@@ -20,9 +22,27 @@ jobs:
         node-version: '18'
         cache: 'npm'
         
+    - name: 🔍 Pre-deploy checks
+      run: |
+        echo "📁 Directorio actual: $(pwd)"
+        echo "📋 Contenido del directorio:"
+        ls -la
+        echo "📦 Verificando archivos de dependencias..."
+        if [ ! -f "package.json" ]; then
+          echo "❌ Error: package.json no encontrado"
+          exit 1
+        fi
+        if [ ! -f "package-lock.json" ]; then
+          echo "❌ Error: package-lock.json no encontrado"
+          exit 1
+        fi
+        echo "✅ Archivos de dependencias encontrados"
+        
     - name: 🔧 Install dependencies
-      run: npm ci
-      
+      run: |
+        echo "📦 Instalando dependencias..."
+        npm ci
+        
     - name: 🔍 Lint code
       run: npm run lint
       
@@ -30,8 +50,10 @@ jobs:
       run: npm test --if-present
       
     - name: 🔨 Build project
-      run: npm run build
-      
+      run: |
+        echo "🔨 Ejecutando build..."
+        npm run build
+        
     - name: 🚀 Deploy to Vercel
       uses: amondnet/vercel-action@v25
       with:

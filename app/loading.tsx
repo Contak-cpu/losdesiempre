@@ -2,35 +2,26 @@ export default function Loading() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white flex items-center justify-center">
       <div className="text-center">
-        {/* Loading Logo */}
-        <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-black/90 border-3 border-red-500/60 flex items-center justify-center overflow-hidden shadow-xl shadow-red-500/30 p-1 animate-pulse">
+        {/* Logo animado */}
+        <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-black/90 border-3 border-red-500/60 flex items-center justify-center overflow-hidden shadow-xl shadow-red-500/30 p-1 animate-pulse">
           <div className="w-full h-full bg-gradient-to-br from-red-600 to-black rounded-full flex items-center justify-center text-white font-bold text-2xl border-2 border-red-500">
             LDS
           </div>
         </div>
         
-        {/* Loading Text */}
-        <h1 className="text-2xl font-bold text-red-400 mb-4 animate-pulse">
-          Los de Siempre Hub
+        {/* Spinner */}
+        <div className="w-16 h-16 border-4 border-red-500 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+        
+        {/* Texto de carga */}
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent mb-2">
+          Los de Siempre
         </h1>
+        <p className="text-gray-300 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+        <p className="text-gray-400 text-sm">Cargando...</p>
         
-        {/* Loading Animation */}
-        <div className="flex justify-center space-x-2 mb-6">
-          <div className="w-3 h-3 bg-red-500 rounded-full animate-bounce"></div>
-          <div className="w-3 h-3 bg-red-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-          <div className="w-3 h-3 bg-red-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-        </div>
-        
-        {/* Loading Message */}
-        <p className="text-gray-400 text-lg animate-pulse">
-          🩸🏛️ Cargando EL TEMPLO DE LAS ZAPAS 🏛️🩸
-        </p>
-        
-        {/* Brand */}
-        <div className="mt-8 text-center">
-          <p className="text-xs text-gray-600">
-            Powered by LDS Hub
-          </p>
+        {/* Indicador de progreso */}
+        <div className="w-48 h-2 bg-gray-800 rounded-full mt-6 mx-auto overflow-hidden">
+          <div className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full animate-pulse"></div>
         </div>
       </div>
     </div>

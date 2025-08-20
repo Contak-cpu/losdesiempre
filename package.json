@@ -6,8 +6,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:force": "set NODE_ENV=production && next build --no-lint",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "if exist .next rmdir /s /q .next && if exist out rmdir /s /q out",
+    "prebuild": "npm run clean"
   },
   "dependencies": {
     "next": "14.0.4",
