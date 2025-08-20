@@ -50,8 +50,10 @@ jobs:
       run: npm test --if-present
       
     - name: 🔨 Build project
-      run: npm run build
-      
+      run: |
+        echo "🔨 Ejecutando build..."
+        npm run build
+        
     - name: 🚀 Deploy to Vercel
       uses: amondnet/vercel-action@v25
       with:

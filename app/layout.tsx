@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   creator: 'Los de Siempre',
   publisher: 'Los de Siempre',
   robots: 'index, follow',
+  metadataBase: new URL('https://losdesiempre-hub.vercel.app'),
   openGraph: {
     title: 'Los de Siempre Hub - El Templo de las Zapas',
     description: 'Multi-local de Sneakers & Moda Premium. Catálogos, WhatsApp y envíos a todo el país.',
@@ -34,7 +35,11 @@ export const metadata: Metadata = {
     description: 'Multi-local de Sneakers & Moda Premium',
     images: ['/og-image.jpg'],
   },
-  viewport: 'width=device-width, initial-scale=1',
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
   themeColor: '#ef4444',
 }
 
