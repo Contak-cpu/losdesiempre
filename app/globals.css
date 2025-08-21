@@ -42,4 +42,80 @@
   .hover-scale {
     @apply transition-transform duration-300 hover:scale-[1.02];
   }
+
+  /* Estilos personalizados para móviles */
+  /* Ocultar barra de scroll en móviles */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+  
+  /* Mejorar experiencia táctil */
+  @media (hover: none) and (pointer: coarse) {
+    .active\:scale-95:active {
+      transform: scale(0.95);
+    }
+  }
+  
+  /* Optimizaciones para dispositivos móviles */
+  @media (max-width: 640px) {
+    /* Mejorar legibilidad en pantallas pequeñas */
+    .text-xs {
+      font-size: 0.75rem;
+      line-height: 1rem;
+    }
+    
+    /* Espaciado optimizado para móviles */
+    .space-y-2 > * + * {
+      margin-top: 0.5rem;
+    }
+    
+    .space-y-3 > * + * {
+      margin-top: 0.75rem;
+    }
+    
+    .space-y-4 > * + * {
+      margin-top: 1rem;
+    }
+  }
+  
+  /* Mejorar contraste en dispositivos móviles */
+  @media (max-width: 640px) {
+    .bg-\[\#374151\] {
+      background-color: #4B5563;
+    }
+    
+    .border-\[\#4B5563\] {
+      border-color: #6B7280;
+    }
+  }
+  
+  /* Optimizaciones para tablets */
+  @media (min-width: 641px) and (max-width: 1024px) {
+    .sm\:px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
+    .sm\:py-8 {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+  
+  /* Mejorar rendimiento en dispositivos táctiles */
+  @media (hover: none) and (pointer: coarse) {
+    * {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    button, [role="button"] {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+  }
 }
