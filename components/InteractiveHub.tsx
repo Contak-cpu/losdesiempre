@@ -17,6 +17,7 @@ const InteractiveHub = () => {
       phone: '+54 2966 507733',
       whatsapp: 'https://wa.me/5492966312775',
       instagram: 'https://www.instagram.com/losdesiempresneakers8',
+      maps: 'https://maps.app.goo.gl/Uwi747RsxGNrhtaT6',
       subtitle: '🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸'
     },
     { 
@@ -30,6 +31,7 @@ const InteractiveHub = () => {
       phone: '+54 261 123456',
       whatsapp: 'https://wa.me/5492611234567',
       instagram: 'https://instagram.com/losdesiempre_mza',
+      maps: 'https://maps.app.goo.gl/reMwsRDzSiM4fP6m9',
       subtitle: 'Sneakers & Moda Premium'
     },
     { 
@@ -41,8 +43,9 @@ const InteractiveHub = () => {
       hours: '9:30 - 20:30',
       address: 'Av. Colón 890, Nueva Córdoba',
       phone: '+54 351 123456',
-      whatsapp: 'https://wa.me/message/2Z7PPPRU6Q2ZA1',
+      whatsapp: 'https://wa.me/5493573456964',
       instagram: 'https://www.instagram.com/losdesiempre_cba',
+      maps: 'https://maps.app.goo.gl/CsdepfKUpkp1HStY6',
       subtitle: 'Tienda Online + Local Físico'
     }
   ];
@@ -117,8 +120,8 @@ const InteractiveHub = () => {
     {
       id: 'whatsapp-cordoba',
       title: 'WhatsApp Córdoba',
-      number: '+54 351 123456',
-      url: 'https://wa.me/message/2Z7PPPRU6Q2ZA1',
+      number: '+54 357 3456964',
+      url: 'https://wa.me/5493573456964',
       location: 'cordoba',
       online: true
     },
@@ -162,6 +165,10 @@ const InteractiveHub = () => {
     window.open(url, '_blank');
   };
 
+  const handleMapsClick = (url: string) => {
+    window.open(url, '_blank');
+  };
+
   const handleLinkClick = (url: string) => {
     if (url) {
       window.open(url, '_blank');
@@ -188,9 +195,9 @@ const InteractiveHub = () => {
             <div className="flex items-center space-x-4">
               <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center border-4 border-[#DC2626] shadow-lg overflow-hidden">
                 <img 
-                  src="https://instagram.fcor2-1.fna.fbcdn.net/v/t51.2885-19/451075842_3739983412911649_6894408099793424640_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby45MDQuYzIifQ&_nc_ht=instagram.fcor2-1.fna.fbcdn.net&_nc_cat=101&_nc_oc=Q6cZ2QGdesYPvd0eRS5sG8HBvpOgdUZFHQBP06YEhiX_bpyTTk7irMKC6bOOT0L9EDMFXM&_nc_ohc=rzZFnUBmjqcQ7kNvwEV3Njv&_nc_gid=CwY69bCBjIxeqTLs6PnzZQ&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfXgC9DYiicxVqJTvmsvdX1ocvBSKpEiIXo5QYnGC04osQ&oe=68ABF20B&_nc_sid=7a9f4b"
+                  src="/logo-lds.svg"
                   alt="Los de Siempre Logo"
-                  className="w-full h-full object-cover rounded-full"
+                  className="w-full h-full object-contain p-1"
                   onError={(e) => {
                     // Fallback si la imagen no carga
                     const target = e.target as HTMLImageElement;
@@ -370,7 +377,10 @@ const InteractiveHub = () => {
               
               {/* Botones de Acción */}
               <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                <button className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg">
+                <button 
+                  onClick={() => handleMapsClick(selectedLocationData.maps)}
+                  className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg"
+                >
                   📍 Cómo llegar
                 </button>
                 <button 
