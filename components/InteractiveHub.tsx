@@ -195,7 +195,7 @@ const InteractiveHub = () => {
             <div className="flex items-center space-x-4">
               <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center border-4 border-[#DC2626] shadow-lg overflow-hidden">
                 <img 
-                  src="/logo-lds.svg"
+                  src="/lds-logo1.png"
                   alt="Los de Siempre Logo"
                   className="w-full h-full object-contain p-1"
                   onError={(e) => {
@@ -300,7 +300,7 @@ const InteractiveHub = () => {
                   
                   <div className="space-y-3 mb-4">
                     <div className="flex items-start space-x-3">
-                      <span className="text-[#E5E7EB] mt-1">📍</span>
+                      <img src="/google-maps.svg" alt="Ubicación" className="w-4 h-4 mt-1" />
                       <span className="text-[#E5E7EB] text-sm leading-relaxed">{location.address}</span>
                     </div>
                     <div className="flex items-center space-x-3">
@@ -343,7 +343,7 @@ const InteractiveHub = () => {
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-start space-x-3">
-                  <span className="text-[#E5E7EB] text-xl mt-1">📍</span>
+                  <img src="/google-maps.svg" alt="Ubicación" className="w-5 h-5 mt-1" />
                   <div>
                     <p className="text-white font-medium mb-1">Dirección</p>
                     <p className="text-[#E5E7EB] text-sm leading-relaxed">
@@ -362,7 +362,7 @@ const InteractiveHub = () => {
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <span className="text-[#E5E7EB] text-xl">📞</span>
+                  <img src="/whatsapp-icon.svg" alt="Teléfono" className="w-5 h-5" />
                   <div>
                     <p className="text-white font-medium mb-1">Teléfono</p>
                     <a 
@@ -379,21 +379,24 @@ const InteractiveHub = () => {
               <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
                 <button 
                   onClick={() => handleMapsClick(selectedLocationData.maps)}
-                  className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg"
+                  className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg flex items-center justify-center space-x-2"
                 >
-                  📍 Cómo llegar
+                  <img src="/google-maps.svg" alt="Google Maps" className="w-5 h-5" />
+                  <span>Cómo llegar</span>
                 </button>
                 <button 
                   onClick={() => handleWhatsAppClick(selectedLocationData.whatsapp)}
-                  className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg"
+                  className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg flex items-center justify-center space-x-2"
                 >
-                  💬 WhatsApp
+                  <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-5 h-5" />
+                  <span>WhatsApp</span>
                 </button>
                 <button 
                   onClick={() => handleInstagramClick(selectedLocationData.instagram)}
-                  className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg"
+                  className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg flex items-center justify-center space-x-2"
                 >
-                  📸 Instagram
+                  <img src="/instagram-icon.svg" alt="Instagram" className="w-5 h-5" />
+                  <span>Instagram</span>
                 </button>
               </div>
             </div>
@@ -448,7 +451,7 @@ const InteractiveHub = () => {
               >
                 <div className="flex items-center space-x-4">
                   <div className="w-14 h-14 bg-[#10B981] rounded-full flex items-center justify-center">
-                    <span className="text-white text-2xl">📞</span>
+                    <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-8 h-8" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-white text-sm">{contact.title}</h3>
