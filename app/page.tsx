@@ -1,5 +1,5 @@
-import StaticHub from '@/components/StaticHub'
+import InteractiveHub from '@/components/InteractiveHub'
 
 export default function Home() {
-  return <StaticHub />
+  return <InteractiveHub />
 }
