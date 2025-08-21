@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { MapPin, Phone, Clock, ShoppingBag, Star, Zap, Calendar, TrendingUp, Heart, Share2 } from 'lucide-react';
 
 const LosDeSeimpreHub = () => {
@@ -8,8 +8,10 @@ const LosDeSeimpreHub = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [favorites, setFavorites] = useState<string[]>([]);
   const [clickStats, setClickStats] = useState<Record<string, number>>({});
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     const timer = setInterval(() => setCurrentTime(new Date()), 60000);
     return () => clearInterval(timer);
   }, []);
@@ -152,7 +154,9 @@ const LosDeSeimpreHub = () => {
     }
   ];
 
-  const handleLinkClick = (linkId: string, url: string) => {
+  const handleLinkClick = useCallback((linkId: string, url: string) => {
+    if (!isClient) return;
+    
     setClickStats(prev => ({
       ...prev,
       [linkId]: (prev[linkId] || 0) + 1
@@ -161,15 +165,32 @@ const LosDeSeimpreHub = () => {
     if (url && url !== '#importadas') {
       window.open(url, '_blank');
     }
-  };
+  }, [isClient]);
 
-  const toggleFavorite = (linkId: string) => {
+  const toggleFavorite = useCallback((linkId: string) => {
+    if (!isClient) return;
+    
     setFavorites(prev => 
       prev.includes(linkId) 
         ? prev.filter(id => id !== linkId)
         : [...prev, linkId]
     );
-  };
+  }, [isClient]);
+
+  const handleLocationSelect = useCallback((locationId: string) => {
+    if (!isClient) return;
+    setSelectedLocation(locationId);
+  }, [isClient]);
+
+  const handleWhatsAppClick = useCallback((url: string) => {
+    if (!isClient) return;
+    window.open(url, '_blank');
+  }, [isClient]);
+
+  const handleInstagramClick = useCallback((url: string) => {
+    if (!isClient) return;
+    window.open(url, '_blank');
+  }, [isClient]);
 
   const filteredLinks = selectedLocation === 'all' 
     ? links 
@@ -192,6 +213,40 @@ const LosDeSeimpreHub = () => {
       default: return <ShoppingBag className="w-5 h-5" />;
     }
   };
+
+  // Renderizado estático inicial sin interactividad
+  if (!isClient) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
+        {/* Header estático */}
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-black/40"></div>
+          <div className="relative px-6 py-8 text-center">
+            <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-black/90 border-3 border-red-500/60 flex items-center justify-center overflow-hidden shadow-xl shadow-red-500/30 p-1">
+              <div className="w-full h-full bg-gradient-to-br from-red-600 to-black rounded-full flex items-center justify-center text-white font-bold text-2xl border-2 border-red-500">
+                LDS
+              </div>
+            </div>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent mb-2">
+              Los de Siempre
+            </h1>
+            <p className="text-gray-300 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+            <p className="text-gray-400 text-sm mb-4">Sneakers & Moda • Multi-Local</p>
+          </div>
+        </div>
+
+        {/* Contenido estático básico */}
+        <div className="px-6 space-y-4">
+          {links.slice(0, 3).map(link => (
+            <div key={link.id} className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
+              <h3 className="font-bold text-lg text-white">{link.title}</h3>
+              <p className="text-sm text-gray-300">{link.subtitle}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
@@ -242,7 +297,7 @@ const LosDeSeimpreHub = () => {
       <div className="px-6 mb-6">
         <div className="flex overflow-x-auto space-x-3 pb-2">
           <button
-            onClick={() => setSelectedLocation('all')}
+            onClick={() => handleLocationSelect('all')}
             className={`px-4 py-2 rounded-full whitespace-nowrap transition-all ${
               selectedLocation === 'all'
                 ? 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg shadow-red-500/25'
@@ -254,7 +309,7 @@ const LosDeSeimpreHub = () => {
           {locations.map(location => (
             <button
               key={location.id}
-              onClick={() => setSelectedLocation(location.id)}
+              onClick={() => handleLocationSelect(location.id)}
               className={`px-4 py-2 rounded-full whitespace-nowrap transition-all ${
                 selectedLocation === location.id
                   ? `bg-gradient-to-r ${location.color} text-white`
@@ -324,11 +379,11 @@ const LosDeSeimpreHub = () => {
                       📍 Cómo llegar
                     </button>
                     <button className="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors"
-                      onClick={() => window.open(location.whatsapp, '_blank')}>
+                      onClick={() => handleWhatsAppClick(location.whatsapp)}>
                       💬 WhatsApp
                     </button>
                     <button className="bg-pink-600 hover:bg-pink-700 text-white py-2 px-3 rounded-lg font-medium transition-colors"
-                      onClick={() => window.open(location.instagram, '_blank')}>
+                      onClick={() => handleInstagramClick(location.instagram)}>
                       📸 IG
                     </button>
                   </div>
@@ -347,7 +402,7 @@ const LosDeSeimpreHub = () => {
               <div 
                 key={location.id}
                 className="bg-gray-800/40 border border-gray-700/50 rounded-xl p-4 hover:bg-gray-700/40 transition-all cursor-pointer"
-                onClick={() => setSelectedLocation(location.id)}
+                onClick={() => handleLocationSelect(location.id)}
               >
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
@@ -462,7 +517,7 @@ const LosDeSeimpreHub = () => {
             .map(contact => (
             <div
               key={contact.id}
-              onClick={() => window.open(contact.url, '_blank')}
+              onClick={() => handleWhatsAppClick(contact.url)}
               className="bg-green-600/20 border border-green-500/30 rounded-xl p-4 flex items-center justify-between hover:bg-green-600/30 transition-all cursor-pointer"
             >
               <div className="flex items-center space-x-3">

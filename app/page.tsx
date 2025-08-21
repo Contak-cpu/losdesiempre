@@ -1,5 +1,5 @@
-import LosDeSeimpreHub from '@/components/LosDeSeimpreHub'
+import StaticHub from '@/components/StaticHub'
 
 export default function Home() {
-  return <LosDeSeimpreHub />
+  return <StaticHub />
 }
