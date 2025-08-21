@@ -193,11 +193,12 @@ const InteractiveHub = () => {
           <div className="flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row sm:justify-between">
             {/* Logo y Título - Centrado en móviles */}
             <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center border-4 border-[#DC2626] shadow-lg overflow-hidden">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center border-4 border-[#DC2626] overflow-hidden">
                 <img 
-                  src="/logo-lds.svg"
+                  src="https://files.fm/u/s9j8kn5xa"
                   alt="Los de Siempre Logo"
-                  className="w-full h-full object-contain p-1"
+                  className="w-full h-full object-cover rounded-full"
+                  crossOrigin="anonymous"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.style.display = 'none';
@@ -241,7 +242,7 @@ const InteractiveHub = () => {
           <div className="flex overflow-x-auto space-x-2 sm:space-x-3 pb-2 scrollbar-hide">
             <button 
               onClick={() => handleLocationSelect('all')}
-              className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium shadow-lg transition-colors whitespace-nowrap text-sm sm:text-base min-w-fit ${
+              className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium transition-colors whitespace-nowrap text-sm sm:text-base min-w-fit ${
                 selectedLocation === 'all' 
                   ? 'bg-[#DC2626] text-white hover:bg-red-700' 
                   : 'bg-[#4B5563] text-[#E5E7EB] hover:bg-[#6B7280]'
@@ -280,7 +281,7 @@ const InteractiveHub = () => {
                 <div 
                   key={location.id}
                   onClick={() => handleLocationSelect(location.id)}
-                  className="bg-[#374151] border border-[#4B5563] rounded-xl p-4 sm:p-6 hover:bg-[#4B5563] transition-all cursor-pointer shadow-lg active:scale-95"
+                  className="bg-[#374151] border border-[#4B5563] rounded-xl p-4 sm:p-6 hover:bg-[#4B5563] transition-all cursor-pointer active:scale-95"
                 >
                   <div className="flex items-start justify-between mb-3 sm:mb-4">
                     <div className="flex items-center space-x-2 sm:space-x-3">
@@ -299,7 +300,7 @@ const InteractiveHub = () => {
                   
                   <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
                     <div className="flex items-start space-x-2 sm:space-x-3">
-                      <img src="/google-maps.svg" alt="Ubicación" className="w-3 h-3 sm:w-4 sm:h-4 mt-1 flex-shrink-0" />
+                      <span className="text-[#E5E7EB] text-sm sm:text-base">📍</span>
                       <span className="text-[#E5E7EB] text-xs sm:text-sm leading-relaxed">{location.address}</span>
                     </div>
                     <div className="flex items-center space-x-2 sm:space-x-3">
@@ -324,7 +325,7 @@ const InteractiveHub = () => {
         {/* Vista Detallada de Local Específico */}
         {selectedLocation !== 'all' && selectedLocationData && (
           <div className="mb-6 sm:mb-8">
-            <div className="bg-[#374151] border border-[#4B5563] rounded-xl p-4 sm:p-8 shadow-lg">
+            <div className="bg-[#374151] border border-[#4B5563] rounded-xl p-4 sm:p-8">
               <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 sm:mb-6 space-y-3 sm:space-y-0">
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   <span className="text-3xl sm:text-4xl">{selectedLocationData.icon}</span>
@@ -342,7 +343,7 @@ const InteractiveHub = () => {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 <div className="flex items-start space-x-2 sm:space-x-3">
-                  <img src="/google-maps.svg" alt="Ubicación" className="w-4 h-4 sm:w-5 sm:h-5 mt-1 flex-shrink-0" />
+                  <span className="text-[#E5E7EB] text-lg sm:text-xl">📍</span>
                   <div>
                     <p className="text-white font-medium mb-1 text-sm sm:text-base">Dirección</p>
                     <p className="text-[#E5E7EB] text-xs sm:text-sm leading-relaxed">
@@ -361,7 +362,7 @@ const InteractiveHub = () => {
                 </div>
                 
                 <div className="flex items-center space-x-2 sm:space-x-3">
-                  <img src="/whatsapp-icon.svg" alt="Teléfono" className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+                  <span className="text-[#E5E7EB] text-lg sm:text-xl">📞</span>
                   <div>
                     <p className="text-white font-medium mb-1 text-sm sm:text-base">Teléfono</p>
                     <a 
@@ -378,23 +379,23 @@ const InteractiveHub = () => {
               <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:space-x-4">
                 <button 
                   onClick={() => handleMapsClick(selectedLocationData.maps)}
-                  className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors shadow-lg flex items-center justify-center space-x-2 active:scale-95"
+                  className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
                 >
-                  <img src="/google-maps.svg" alt="Google Maps" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="text-[#E5E7EB] text-lg sm:text-xl">📍</span>
                   <span className="text-sm sm:text-base">Cómo llegar</span>
                 </button>
                 <button 
                   onClick={() => handleWhatsAppClick(selectedLocationData.whatsapp)}
-                  className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors shadow-lg flex items-center justify-center space-x-2 active:scale-95"
+                  className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
                 >
-                  <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="text-[#E5E7EB] text-lg sm:text-xl">💬</span>
                   <span className="text-sm sm:text-base">WhatsApp</span>
                 </button>
                 <button 
                   onClick={() => handleInstagramClick(selectedLocationData.instagram)}
-                  className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors shadow-lg flex items-center justify-center space-x-2 active:scale-95"
+                  className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
                 >
-                  <img src="/instagram-icon.svg" alt="Instagram" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="text-[#E5E7EB] text-lg sm:text-xl">📸</span>
                   <span className="text-sm sm:text-base">Instagram</span>
                 </button>
               </div>
@@ -410,7 +411,7 @@ const InteractiveHub = () => {
               <div
                 key={link.id}
                 onClick={() => handleLinkClick(link.url)}
-                className={`relative bg-[#374151] border border-[#4B5563] rounded-xl p-4 sm:p-6 ${getPriorityColor(link.priority)} hover:bg-[#4B5563] transition-all cursor-pointer shadow-lg active:scale-95`}
+                className={`relative bg-[#374151] border border-[#4B5563] rounded-xl p-4 sm:p-6 ${getPriorityColor(link.priority)} hover:bg-[#4B5563] transition-all cursor-pointer active:scale-95`}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between space-y-3 sm:space-y-0">
                   <div className="flex items-start sm:items-center space-x-3 sm:space-x-4 flex-1">
@@ -428,7 +429,7 @@ const InteractiveHub = () => {
                   
                   <div className="text-right flex-shrink-0">
                     <div className="text-xs text-[#9CA3AF] font-medium mb-2">{link.clicks} clicks</div>
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#DC2626] rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#DC2626] rounded-full flex items-center justify-center">
                       <span className="text-xs sm:text-sm font-bold text-white">→</span>
                     </div>
                   </div>
@@ -450,7 +451,7 @@ const InteractiveHub = () => {
               >
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#10B981] rounded-full flex items-center justify-center flex-shrink-0">
-                    <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-6 h-6 sm:w-8 sm:h-8" />
+                    <span className="text-white text-lg sm:text-xl">💬</span>
                   </div>
                   <div className="min-w-0 flex-1">
                     <h3 className="font-semibold text-white text-xs sm:text-sm truncate">{contact.title}</h3>

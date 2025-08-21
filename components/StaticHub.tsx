@@ -165,8 +165,21 @@ const StaticHub = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Logo y Título */}
             <div className="flex items-center space-x-4">
-              <div className="w-20 h-20 rounded-full bg-[#DC2626] flex items-center justify-center border-4 border-white shadow-lg">
-                <span className="text-2xl font-bold text-white">LDS</span>
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center border-4 border-[#DC2626] overflow-hidden">
+                <img 
+                  src="https://files.fm/u/s9j8kn5xa"
+                  alt="Los de Siempre Logo"
+                  className="w-full h-full object-cover rounded-full"
+                  crossOrigin="anonymous"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <div className="hidden w-full h-full bg-[#DC2626] flex items-center justify-center text-white font-bold text-2xl">
+                  LDS
+                </div>
               </div>
               <div>
                 <h1 className="text-3xl font-bold text-white">
@@ -182,7 +195,7 @@ const StaticHub = () => {
                 <div className="text-2xl font-bold text-[#10B981]">3</div>
                 <div className="text-xs text-[#E5E7EB]">Locales</div>
               </div>
-              <div className="bg-[#374151] rounded-lg p-3 min-w-[80px]">
+              <div className="bg-[#374151] rounded-full p-3 min-w-[80px]">
                 <div className="text-2xl font-bold text-[#3B82F6]">500+</div>
                 <div className="text-xs text-[#E5E7EB]">Modelos</div>
               </div>
@@ -199,7 +212,7 @@ const StaticHub = () => {
       <div className="bg-[#1F1B4B] border-b border-[#374151] px-6 py-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex overflow-x-auto space-x-3 pb-2">
-            <button className="px-6 py-3 rounded-full bg-[#DC2626] text-white font-medium shadow-lg hover:bg-red-700 transition-colors whitespace-nowrap">
+            <button className="px-6 py-3 rounded-full bg-[#DC2626] text-white font-medium hover:bg-red-700 transition-colors whitespace-nowrap">
               🌟 Todos los locales
             </button>
             {locations.map(location => (
@@ -226,7 +239,7 @@ const StaticHub = () => {
             {locations.map(location => (
               <div 
                 key={location.id}
-                className="bg-[#374151] border border-[#4B5563] rounded-xl p-6 hover:bg-[#4B5563] transition-all cursor-pointer shadow-lg"
+                className="bg-[#374151] border border-[#4B5563] rounded-xl p-6 hover:bg-[#4B5563] transition-all cursor-pointer"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
@@ -245,11 +258,11 @@ const StaticHub = () => {
                 
                 <div className="space-y-3 mb-4">
                   <div className="flex items-start space-x-3">
-                    <span className="text-[#E5E7EB] mt-1">📍</span>
+                    <span className="text-[#E5E7EB] text-lg">📍</span>
                     <span className="text-[#E5E7EB] text-sm leading-relaxed">{location.address}</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <span className="text-[#E5E7EB]">🕐</span>
+                    <span className="text-[#E5E7EB] text-lg">🕐</span>
                     <span className="text-[#E5E7EB] text-sm">Lunes a Sábado: {location.hours}</span>
                   </div>
                   {location.subtitle && (
@@ -268,7 +281,7 @@ const StaticHub = () => {
 
         {/* Vista Detallada de Local Específico (Ejemplo con Río Gallegos) */}
         <div className="mb-8">
-          <div className="bg-[#374151] border border-[#4B5563] rounded-xl p-8 shadow-lg">
+          <div className="bg-[#374151] border border-[#4B5563] rounded-xl p-8">
             <div className="flex items-start justify-between mb-6">
               <div className="flex items-center space-x-4">
                 <span className="text-4xl">🔥</span>
@@ -283,7 +296,7 @@ const StaticHub = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-start space-x-3">
-                <span className="text-[#E5E7EB] text-xl mt-1">📍</span>
+                <span className="text-[#E5E7EB] text-xl">📍</span>
                 <div>
                   <p className="text-white font-medium mb-1">Dirección</p>
                   <p className="text-[#E5E7EB] text-sm leading-relaxed">
@@ -317,13 +330,13 @@ const StaticHub = () => {
             
             {/* Botones de Acción */}
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-              <button className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg">
+              <button className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-colors">
                 📍 Cómo llegar
               </button>
-              <button className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg">
+              <button className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-6 rounded-lg font-medium transition-colors">
                 💬 WhatsApp
               </button>
-              <button className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-6 rounded-lg font-medium transition-colors shadow-lg">
+              <button className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-6 rounded-lg font-medium transition-colors">
                 📸 Instagram
               </button>
             </div>
@@ -337,7 +350,7 @@ const StaticHub = () => {
             {links.map(link => (
               <div
                 key={link.id}
-                className={`relative bg-[#374151] border border-[#4B5563] rounded-xl p-6 ${getPriorityColor(link.priority)} hover:bg-[#4B5563] transition-all cursor-pointer shadow-lg`}
+                className={`relative bg-[#374151] border border-[#4B5563] rounded-xl p-6 ${getPriorityColor(link.priority)} hover:bg-[#4B5563] transition-all cursor-pointer`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4 flex-1">
@@ -355,7 +368,7 @@ const StaticHub = () => {
                   
                   <div className="text-right">
                     <div className="text-xs text-[#9CA3AF] font-medium mb-2">{link.clicks} clicks</div>
-                    <div className="w-10 h-10 bg-[#DC2626] rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-10 h-10 bg-[#DC2626] rounded-full flex items-center justify-center">
                       <span className="text-sm font-bold text-white">→</span>
                     </div>
                   </div>
@@ -376,7 +389,7 @@ const StaticHub = () => {
               >
                 <div className="flex items-center space-x-4">
                   <div className="w-14 h-14 bg-[#10B981] rounded-full flex items-center justify-center">
-                    <span className="text-white text-2xl">📞</span>
+                    <span className="text-white text-2xl">💬</span>
                   </div>
                   <div>
                     <h3 className="font-semibold text-white text-sm">{contact.title}</h3>

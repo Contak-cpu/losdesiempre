@@ -21,7 +21,7 @@ const LosDeSeimpreHub = () => {
       id: 'rio-gallegos', 
       name: 'Río Gallegos', 
       status: 'Entrega Inmediata',
-      color: 'from-red-500 to-pink-500',
+      color: 'bg-red-600',
       icon: '🔥',
       hours: '9:00 - 21:00',
       address: 'Galería Sur 1, Alberdi esquina 9 de julio, Río Gallegos, Santa Cruz',
@@ -34,7 +34,7 @@ const LosDeSeimpreHub = () => {
       id: 'mendoza', 
       name: 'Mendoza', 
       status: 'Stock Disponible',
-      color: 'from-purple-500 to-blue-500',
+      color: 'bg-blue-600',
       icon: '⚡',
       hours: '10:00 - 20:00',
       address: 'Av. Las Heras 567, Mendoza Capital',
@@ -47,7 +47,7 @@ const LosDeSeimpreHub = () => {
       id: 'cordoba', 
       name: 'Córdoba', 
       status: 'Web + Local',
-      color: 'from-green-500 to-teal-500',
+      color: 'bg-green-600',
       icon: '🌟',
       hours: '9:30 - 20:30',
       address: 'Av. Colón 890, Nueva Córdoba',
@@ -198,8 +198,8 @@ const LosDeSeimpreHub = () => {
 
   const getPriorityColor = (priority: string) => {
     switch(priority) {
-      case 'high': return 'border-l-red-500 bg-red-900/20';
-      case 'medium': return 'border-l-orange-500 bg-orange-900/20';
+      case 'high': return 'border-l-red-500 bg-red-900/10';
+      case 'medium': return 'border-l-orange-500 bg-orange-900/10';
       default: return 'border-l-gray-500 bg-gray-800/20';
     }
   };
@@ -217,17 +217,29 @@ const LosDeSeimpreHub = () => {
   // Renderizado estático inicial sin interactividad
   if (!isClient) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
+      <div className="min-h-screen bg-gray-900 text-white">
         {/* Header estático */}
         <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-black/40"></div>
+          <div className="absolute inset-0 bg-red-500/10"></div>
           <div className="relative px-6 py-8 text-center">
-            <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-black/90 border-3 border-red-500/60 flex items-center justify-center overflow-hidden shadow-xl shadow-red-500/30 p-1">
-              <div className="w-full h-full bg-gradient-to-br from-red-600 to-black rounded-full flex items-center justify-center text-white font-bold text-2xl border-2 border-red-500">
+            <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-800 border-2 border-red-500 flex items-center justify-center overflow-hidden">
+              <img 
+                src="https://files.fm/u/s9j8kn5xa"
+                alt="Los de Siempre Logo" 
+                className="w-full h-full object-cover rounded-full"
+                crossOrigin="anonymous"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  if (fallback) fallback.style.display = 'flex';
+                }}
+              />
+              <div className="w-full h-full bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl" style={{display: 'none'}}>
                 LDS
               </div>
             </div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent mb-2">
+            <h1 className="text-3xl font-bold text-red-500 mb-2">
               Los de Siempre
             </h1>
             <p className="text-gray-300 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
@@ -238,7 +250,7 @@ const LosDeSeimpreHub = () => {
         {/* Contenido estático básico */}
         <div className="px-6 space-y-4">
           {links.slice(0, 3).map(link => (
-            <div key={link.id} className="bg-gray-800/50 rounded-xl p-4 border border-gray-700/50">
+            <div key={link.id} className="bg-gray-800 rounded-xl p-4 border border-gray-700">
               <h3 className="font-bold text-lg text-white">{link.title}</h3>
               <p className="text-sm text-gray-300">{link.subtitle}</p>
             </div>
@@ -249,14 +261,14 @@ const LosDeSeimpreHub = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white">
+    <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-black/40 animate-pulse"></div>
+        <div className="absolute inset-0 bg-red-500/10"></div>
         <div className="relative px-6 py-8 text-center">
-          <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-black/90 border-3 border-red-500/60 flex items-center justify-center overflow-hidden shadow-xl shadow-red-500/30 p-1">
+          <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-800 border-2 border-red-500 flex items-center justify-center overflow-hidden">
             <img 
-              src="https://instagram.fcor2-1.fna.fbcdn.net/v/t51.2885-19/451075842_3739983412911649_6894408099793424640_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby45MDQuYzIifQ&_nc_ht=instagram.fcor2-1.fna.fbcdn.net&_nc_cat=101&_nc_oc=Q6cZ2QGdesYPvd0eRS5sG8HBvpOgdUZFHQBP06YEhiX_bpyTTk7irMKC6bOOT0L9EDMFXM&_nc_ohc=rzZFnUBmjqcQ7kNvwEV3Njv&_nc_gid=CwY69bCBjIxeqTLs6PnzZQ&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AfXgC9DYiicxVqJTvmsvdX1ocvBSKpEiIXo5QYnGC04osQ&oe=68ABF20B&_nc_sid=7a9f4b" 
+              src="https://files.fm/u/s9j8kn5xa"
               alt="Los de Siempre Logo" 
               className="w-full h-full object-cover rounded-full"
               crossOrigin="anonymous"
@@ -267,11 +279,11 @@ const LosDeSeimpreHub = () => {
                 if (fallback) fallback.style.display = 'flex';
               }}
             />
-            <div className="w-full h-full bg-gradient-to-br from-red-600 to-black rounded-full flex items-center justify-center text-white font-bold text-2xl border-2 border-red-500" style={{display: 'none'}}>
+            <div className="w-full h-full bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl" style={{display: 'none'}}>
               LDS
             </div>
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent mb-2">
+          <h1 className="text-3xl font-bold text-red-500 mb-2">
             Los de Siempre
           </h1>
           <p className="text-gray-300 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
@@ -286,7 +298,7 @@ const LosDeSeimpreHub = () => {
               <span>{currentTime.toLocaleTimeString('es-AR', { timeStyle: 'short' })}</span>
             </div>
             <div className="flex items-center space-x-1">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
               <span>Online</span>
             </div>
           </div>
@@ -300,7 +312,7 @@ const LosDeSeimpreHub = () => {
             onClick={() => handleLocationSelect('all')}
             className={`px-4 py-2 rounded-full whitespace-nowrap transition-all ${
               selectedLocation === 'all'
-                ? 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg shadow-red-500/25'
+                ? 'bg-red-600 text-white'
                 : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
             }`}
           >
@@ -312,7 +324,7 @@ const LosDeSeimpreHub = () => {
               onClick={() => handleLocationSelect(location.id)}
               className={`px-4 py-2 rounded-full whitespace-nowrap transition-all ${
                 selectedLocation === location.id
-                  ? `bg-gradient-to-r ${location.color} text-white`
+                  ? `${location.color} text-white`
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
             >
@@ -325,7 +337,7 @@ const LosDeSeimpreHub = () => {
       {/* Locations Info Section */}
       {selectedLocation !== 'all' && (
         <div className="px-6 mb-6">
-          <div className="bg-gray-800/60 rounded-xl p-6 border border-gray-700/50">
+          <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
             {locations
               .filter(loc => loc.id === selectedLocation)
               .map(location => (
@@ -334,7 +346,7 @@ const LosDeSeimpreHub = () => {
                     <h3 className="text-xl font-bold text-white">
                       {location.icon} {location.name}
                     </h3>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${location.color} text-white`}>
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${location.color} text-white`}>
                       {location.status}
                     </span>
                   </div>
@@ -401,7 +413,7 @@ const LosDeSeimpreHub = () => {
             {locations.map(location => (
               <div 
                 key={location.id}
-                className="bg-gray-800/40 border border-gray-700/50 rounded-xl p-4 hover:bg-gray-700/40 transition-all cursor-pointer"
+                className="bg-gray-800 border border-gray-700 rounded-xl p-4 hover:bg-gray-700 transition-all cursor-pointer"
                 onClick={() => handleLocationSelect(location.id)}
               >
                 <div className="flex items-start justify-between">
@@ -409,7 +421,7 @@ const LosDeSeimpreHub = () => {
                     <div className="flex items-center space-x-2 mb-2">
                       <span className="text-lg">{location.icon}</span>
                       <h3 className="font-bold text-white">{location.name}</h3>
-                      <span className={`px-2 py-1 rounded text-xs font-medium bg-gradient-to-r ${location.color} text-white`}>
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${location.color} text-white`}>
                         {location.status}
                       </span>
                     </div>
@@ -441,15 +453,15 @@ const LosDeSeimpreHub = () => {
       {/* Quick Stats */}
       <div className="px-6 mb-6">
         <div className="grid grid-cols-3 gap-4">
-          <div className="bg-gray-800/50 rounded-lg p-4 text-center">
+          <div className="bg-gray-800 rounded-lg p-4 text-center border border-gray-700">
             <div className="text-2xl font-bold text-green-400">98%</div>
             <div className="text-xs text-gray-400">Stock Disponible</div>
           </div>
-          <div className="bg-gray-800/50 rounded-lg p-4 text-center">
+          <div className="bg-gray-800 rounded-lg p-4 text-center border border-gray-700">
             <div className="text-2xl font-bold text-blue-400">24h</div>
             <div className="text-xs text-gray-400">Envío Express</div>
           </div>
-          <div className="bg-gray-800/50 rounded-lg p-4 text-center">
+          <div className="bg-gray-800 rounded-lg p-4 text-center border border-gray-700">
             <div className="text-2xl font-bold text-purple-400">4.9★</div>
             <div className="text-xs text-gray-400">Calificación</div>
           </div>
@@ -462,15 +474,15 @@ const LosDeSeimpreHub = () => {
           <div
             key={link.id}
             onClick={() => handleLinkClick(link.id, link.url)}
-            className={`relative group bg-gray-800/50 backdrop-blur-sm rounded-xl p-4 border-l-4 ${getPriorityColor(link.priority)} hover:bg-gray-700/80 transition-all duration-300 cursor-pointer hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/25 border border-gray-700/50`}
+            className={`relative group bg-gray-800 rounded-xl p-4 border-l-4 ${getPriorityColor(link.priority)} hover:bg-gray-700 transition-all duration-200 cursor-pointer border border-gray-700`}
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-3 flex-1">
-                <div className="p-2 bg-gray-700/80 rounded-lg border border-gray-600">
+                <div className="p-2 bg-gray-700 rounded-lg border border-gray-600">
                   {getTypeIcon(link.type)}
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-bold text-lg text-white group-hover:text-red-300 transition-colors drop-shadow-sm">
+                  <h3 className="font-bold text-lg text-white group-hover:text-red-300 transition-colors">
                     {link.title}
                   </h3>
                   <p className="text-sm text-gray-300 font-medium">{link.subtitle}</p>
@@ -495,15 +507,12 @@ const LosDeSeimpreHub = () => {
                 
                 <div className="text-right">
                   <div className="text-xs text-gray-400 font-medium">{link.clicks} clicks</div>
-                  <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
                     <span className="text-sm font-bold text-white">→</span>
                   </div>
                 </div>
               </div>
             </div>
-            
-            {/* Click ripple effect */}
-            <div className="absolute inset-0 bg-red-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
           </div>
         ))}
       </div>
