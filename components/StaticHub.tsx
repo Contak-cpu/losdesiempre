@@ -165,21 +165,8 @@ const StaticHub = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Logo y Título */}
             <div className="flex items-center space-x-4">
-              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center border-4 border-[#DC2626] overflow-hidden">
-                <img 
-                  src="https://files.fm/u/s9j8kn5xa"
-                  alt="Los de Siempre Logo"
-                  className="w-full h-full object-cover rounded-full"
-                  crossOrigin="anonymous"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    target.nextElementSibling?.classList.remove('hidden');
-                  }}
-                />
-                <div className="hidden w-full h-full bg-[#DC2626] flex items-center justify-center text-white font-bold text-2xl">
-                  LDS
-                </div>
+              <div className="w-20 h-20 rounded-full bg-red-600 flex items-center justify-center border-4 border-[#DC2626]">
+                <span className="text-white font-bold text-2xl">LDS</span>
               </div>
               <div>
                 <h1 className="text-3xl font-bold text-white">
@@ -334,10 +321,12 @@ const StaticHub = () => {
                 📍 Cómo llegar
               </button>
               <button className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-6 rounded-lg font-medium transition-colors">
-                💬 WhatsApp
+                <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-5 h-5 inline mr-2" />
+                WhatsApp
               </button>
               <button className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-6 rounded-lg font-medium transition-colors">
-                📸 Instagram
+                <img src="/instagram-icon.svg" alt="Instagram" className="w-5 h-5 inline mr-2" />
+                Instagram
               </button>
             </div>
           </div>
@@ -389,7 +378,7 @@ const StaticHub = () => {
               >
                 <div className="flex items-center space-x-4">
                   <div className="w-14 h-14 bg-[#10B981] rounded-full flex items-center justify-center">
-                    <span className="text-white text-2xl">💬</span>
+                    <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-7 h-7" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-white text-sm">{contact.title}</h3>

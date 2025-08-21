@@ -222,22 +222,8 @@ const LosDeSeimpreHub = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-red-500/10"></div>
           <div className="relative px-6 py-8 text-center">
-            <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-800 border-2 border-red-500 flex items-center justify-center overflow-hidden">
-              <img 
-                src="https://files.fm/u/s9j8kn5xa"
-                alt="Los de Siempre Logo" 
-                className="w-full h-full object-cover rounded-full"
-                crossOrigin="anonymous"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                  const fallback = target.nextElementSibling as HTMLElement;
-                  if (fallback) fallback.style.display = 'flex';
-                }}
-              />
-              <div className="w-full h-full bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl" style={{display: 'none'}}>
-                LDS
-              </div>
+            <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-red-600 flex items-center justify-center">
+              <span className="text-white font-bold text-2xl">LDS</span>
             </div>
             <h1 className="text-3xl font-bold text-red-500 mb-2">
               Los de Siempre
@@ -266,22 +252,8 @@ const LosDeSeimpreHub = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-red-500/10"></div>
         <div className="relative px-6 py-8 text-center">
-          <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-800 border-2 border-red-500 flex items-center justify-center overflow-hidden">
-            <img 
-              src="https://files.fm/u/s9j8kn5xa"
-              alt="Los de Siempre Logo" 
-              className="w-full h-full object-cover rounded-full"
-              crossOrigin="anonymous"
-              onError={(e) => {
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                const fallback = target.nextElementSibling as HTMLElement;
-                if (fallback) fallback.style.display = 'flex';
-              }}
-            />
-            <div className="w-full h-full bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl" style={{display: 'none'}}>
-              LDS
-            </div>
+          <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-red-600 flex items-center justify-center">
+            <span className="text-white font-bold text-2xl">LDS</span>
           </div>
           <h1 className="text-3xl font-bold text-red-500 mb-2">
             Los de Siempre
@@ -392,11 +364,13 @@ const LosDeSeimpreHub = () => {
                     </button>
                     <button className="flex-1 bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg font-medium transition-colors"
                       onClick={() => handleWhatsAppClick(location.whatsapp)}>
-                      💬 WhatsApp
+                      <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-4 h-4 inline mr-2" />
+                      WhatsApp
                     </button>
                     <button className="bg-pink-600 hover:bg-pink-700 text-white py-2 px-3 rounded-lg font-medium transition-colors"
                       onClick={() => handleInstagramClick(location.instagram)}>
-                      📸 IG
+                      <img src="/instagram-icon.svg" alt="Instagram" className="w-4 h-4 inline mr-2" />
+                      IG
                     </button>
                   </div>
                 </div>
@@ -531,7 +505,7 @@ const LosDeSeimpreHub = () => {
             >
               <div className="flex items-center space-x-3">
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-white" />
+                  <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">{contact.title}</h3>

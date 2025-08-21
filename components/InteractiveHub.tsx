@@ -193,21 +193,8 @@ const InteractiveHub = () => {
           <div className="flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row sm:justify-between">
             {/* Logo y Título - Centrado en móviles */}
             <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white flex items-center justify-center border-4 border-[#DC2626] overflow-hidden">
-                <img 
-                  src="https://files.fm/u/s9j8kn5xa"
-                  alt="Los de Siempre Logo"
-                  className="w-full h-full object-cover rounded-full"
-                  crossOrigin="anonymous"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    target.nextElementSibling?.classList.remove('hidden');
-                  }}
-                />
-                <div className="hidden w-full h-full bg-[#DC2626] flex items-center justify-center text-white font-bold text-xl sm:text-2xl">
-                  LDS
-                </div>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-600 flex items-center justify-center border-4 border-[#DC2626]">
+                <span className="text-white font-bold text-xl sm:text-2xl">LDS</span>
               </div>
               <div>
                 <h1 className="text-2xl sm:text-3xl font-bold text-white">
@@ -388,14 +375,14 @@ const InteractiveHub = () => {
                   onClick={() => handleWhatsAppClick(selectedLocationData.whatsapp)}
                   className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
                 >
-                  <span className="text-[#E5E7EB] text-lg sm:text-xl">💬</span>
+                  <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-5 h-5" />
                   <span className="text-sm sm:text-base">WhatsApp</span>
                 </button>
                 <button 
                   onClick={() => handleInstagramClick(selectedLocationData.instagram)}
                   className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
                 >
-                  <span className="text-[#E5E7EB] text-lg sm:text-xl">📸</span>
+                  <img src="/instagram-icon.svg" alt="Instagram" className="w-5 h-5" />
                   <span className="text-sm sm:text-base">Instagram</span>
                 </button>
               </div>
@@ -451,7 +438,7 @@ const InteractiveHub = () => {
               >
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   <div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#10B981] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-lg sm:text-xl">💬</span>
+                    <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-6 h-6" />
                   </div>
                   <div className="min-w-0 flex-1">
                     <h3 className="font-semibold text-white text-xs sm:text-sm truncate">{contact.title}</h3>
