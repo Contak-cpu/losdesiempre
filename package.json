@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:force": "set NODE_ENV=production && next build --no-lint",
+    "build:static": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "clean": "rimraf .next out",
-    "prebuild": "npm run clean"
+    "prebuild": "npm run clean",
+    "export": "next export"
   },
   "dependencies": {
     "lucide-react": "^0.294.0",
