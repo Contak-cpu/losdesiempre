@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   trailingSlash: true,
   poweredByHeader: false,
   compress: true,
@@ -13,12 +12,6 @@ const nextConfig = {
   experimental: {
     // Deshabilitar características que requieren servidor
     serverComponentsExternalPackages: [],
-  },
-  // Configuración para build estático
-  distDir: 'out',
-  // No generar archivos de servidor
-  generateBuildId: async () => {
-    return 'static-build'
   }
 }
 
