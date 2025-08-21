@@ -34,8 +34,6 @@ export const metadata: Metadata = {
     description: 'Multi-local de Sneakers & Moda Premium',
     images: ['/og-image.jpg'],
   },
-  viewport: 'width=device-width, initial-scale=1',
-  themeColor: '#ef4444',
 }
 
 export default function RootLayout({

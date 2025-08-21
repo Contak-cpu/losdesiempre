@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Home, ArrowLeft, Zap } from 'lucide-react'
 
 export default function NotFound() {
   return (
@@ -42,17 +41,14 @@ export default function NotFound() {
             href="/"
             className="inline-flex items-center justify-center w-full bg-gradient-to-r from-red-500 to-red-600 text-white py-3 px-6 rounded-lg font-medium hover:from-red-600 hover:to-red-700 transition-all duration-300 shadow-lg shadow-red-500/25"
           >
-            <Home className="w-5 h-5 mr-2" />
+            <span className="mr-2">🏠</span>
             Volver al Hub Principal
           </Link>
           
-          <button 
-            onClick={() => window.history.back()}
-            className="inline-flex items-center justify-center w-full bg-gray-800 text-gray-300 py-3 px-6 rounded-lg font-medium hover:bg-gray-700 transition-colors border border-gray-700"
-          >
-            <ArrowLeft className="w-5 h-5 mr-2" />
+          <div className="inline-flex items-center justify-center w-full bg-gray-800 text-gray-300 py-3 px-6 rounded-lg font-medium border border-gray-700">
+            <span className="mr-2">⬅️</span>
             Página Anterior
-          </button>
+          </div>
         </div>
         
         {/* Footer */}
