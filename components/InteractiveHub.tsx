@@ -436,7 +436,7 @@ const InteractiveHub = () => {
                 onClick={() => handleWhatsAppClick(contact.url)}
                 className="bg-[#10B981]/20 border border-[#10B981]/30 rounded-xl p-4 sm:p-6 flex items-center justify-between hover:bg-[#10B981]/30 transition-all cursor-pointer active:scale-95"
               >
-                <div className="flex items-center space-x-3 sm:space-x-4">
+                <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
                   <div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#10B981] rounded-full flex items-center justify-center flex-shrink-0">
                     <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-6 h-6" />
                   </div>
@@ -445,9 +445,9 @@ const InteractiveHub = () => {
                     <p className="text-[#E5E7EB] text-xs sm:text-sm truncate">{contact.number}</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-2 flex-shrink-0">
+                <div className="flex items-center space-x-2 flex-shrink-0 ml-2 sm:ml-4">
                   <div className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${contact.online ? 'bg-[#10B981]' : 'bg-[#6B7280]'}`}></div>
-                  <span className="text-xs text-[#9CA3AF] hidden sm:block">
+                  <span className="text-xs text-[#9CA3AF] hidden sm:block whitespace-nowrap">
                     {contact.online ? 'En línea' : 'Ocupado'}
                   </span>
                 </div>

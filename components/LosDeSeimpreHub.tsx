@@ -503,18 +503,18 @@ const LosDeSeimpreHub = () => {
               onClick={() => handleWhatsAppClick(contact.url)}
               className="bg-green-600/20 border border-green-500/30 rounded-xl p-4 flex items-center justify-between hover:bg-green-600/30 transition-all cursor-pointer"
             >
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+              <div className="flex items-center space-x-3 flex-1 min-w-0">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                   <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-6 h-6" />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-white">{contact.title}</h3>
-                  <p className="text-sm text-gray-300">{contact.number}</p>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-semibold text-white truncate">{contact.title}</h3>
+                  <p className="text-sm text-gray-300 truncate">{contact.number}</p>
                 </div>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 flex-shrink-0 ml-4">
                 <div className={`w-3 h-3 rounded-full ${contact.online ? 'bg-green-400' : 'bg-gray-400'}`}></div>
-                <span className="text-xs text-gray-400">
+                <span className="text-xs text-gray-400 whitespace-nowrap">
                   {contact.online ? 'En línea' : 'Ocupado'}
                 </span>
               </div>

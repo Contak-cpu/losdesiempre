@@ -376,18 +376,18 @@ const StaticHub = () => {
                 key={contact.id}
                 className="bg-[#10B981]/20 border border-[#10B981]/30 rounded-xl p-6 flex items-center justify-between hover:bg-[#10B981]/30 transition-all cursor-pointer"
               >
-                <div className="flex items-center space-x-4">
-                  <div className="w-14 h-14 bg-[#10B981] rounded-full flex items-center justify-center">
+                <div className="flex items-center space-x-4 flex-1">
+                  <div className="w-14 h-14 bg-[#10B981] rounded-full flex items-center justify-center flex-shrink-0">
                     <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-7 h-7" />
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-white text-sm">{contact.title}</h3>
-                    <p className="text-[#E5E7EB] text-sm">{contact.number}</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-white text-sm truncate">{contact.title}</h3>
+                    <p className="text-[#E5E7EB] text-sm truncate">{contact.number}</p>
                   </div>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center space-x-2 flex-shrink-0 ml-4">
                   <div className={`w-3 h-3 rounded-full ${contact.online ? 'bg-[#10B981]' : 'bg-[#6B7280]'}`}></div>
-                  <span className="text-xs text-[#9CA3AF]">
+                  <span className="text-xs text-[#9CA3AF] whitespace-nowrap">
                     {contact.online ? 'En línea' : 'Ocupado'}
                   </span>
                 </div>
