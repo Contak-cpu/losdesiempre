@@ -460,14 +460,14 @@ const InteractiveHub = () => {
         </div>
       </div>
 
-      {/* Footer - Responsive */}
-      <div className="bg-[#1F1B4B] border-t border-[#374151] px-4 sm:px-6 py-6 sm:py-8">
+             {/* Footer - Responsive */}
+       <div className="bg-gray-900 border-t border-gray-800 px-4 sm:px-6 py-6 sm:py-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center space-x-4 sm:space-x-6 mb-4 sm:mb-6">
-            <div className="p-3 sm:p-4 bg-[#374151] rounded-full hover:bg-[#4B5563] transition-colors cursor-pointer active:scale-95">
+            <div className="p-3 sm:p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer active:scale-95 border border-gray-700">
               <span className="text-xl sm:text-2xl">📤</span>
             </div>
-            <div className="p-3 sm:p-4 bg-[#374151] rounded-full hover:bg-[#4B5563] transition-colors cursor-pointer active:scale-95">
+            <div className="p-3 sm:p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer active:scale-95 border border-gray-700">
               <span className="text-xl sm:text-2xl">📅</span>
             </div>
           </div>

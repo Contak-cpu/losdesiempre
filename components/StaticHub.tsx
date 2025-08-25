@@ -158,9 +158,9 @@ const StaticHub = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#2D1B69] text-white">
-      {/* Header Mejorado */}
-      <div className="bg-[#1F1B4B] border-b border-[#374151] px-6 py-8">
+         <div className="min-h-screen bg-black text-white">
+       {/* Header Mejorado */}
+       <div className="bg-gray-900 border-b border-gray-800 px-6 py-8">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Logo y Título */}
@@ -181,25 +181,25 @@ const StaticHub = () => {
             
             {/* Stats en línea */}
             <div className="flex items-center space-x-6 text-center">
-              <div className="bg-[#374151] rounded-lg p-3 min-w-[80px]">
-                <div className="text-2xl font-bold text-[#10B981]">3</div>
-                <div className="text-xs text-[#E5E7EB]">Locales</div>
+              <div className="bg-gray-800 rounded-lg p-3 min-w-[80px] border border-gray-700">
+                <div className="text-2xl font-bold text-green-400">3</div>
+                <div className="text-xs text-gray-300">Locales</div>
               </div>
-              <div className="bg-[#374151] rounded-full p-3 min-w-[80px]">
-                <div className="text-2xl font-bold text-[#3B82F6]">500+</div>
-                <div className="text-xs text-[#E5E7EB]">Modelos</div>
+              <div className="bg-gray-800 rounded-lg p-3 min-w-[80px] border border-gray-700">
+                <div className="text-2xl font-bold text-blue-400">500+</div>
+                <div className="text-xs text-gray-300">Modelos</div>
               </div>
-              <div className="bg-[#374151] rounded-lg p-3 min-w-[80px]">
-                <div className="text-2xl font-bold text-[#DC2626]">24h</div>
-                <div className="text-xs text-[#E5E7EB]">Envío</div>
+              <div className="bg-gray-800 rounded-lg p-3 min-w-[80px] border border-gray-700">
+                <div className="text-2xl font-bold text-red-400">24h</div>
+                <div className="text-xs text-gray-300">Envío</div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Filtros de Navegación Mejorados */}
-      <div className="bg-[#1F1B4B] border-b border-[#374151] px-6 py-4">
+             {/* Filtros de Navegación Mejorados */}
+       <div className="bg-gray-900 border-b border-gray-800 px-6 py-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex overflow-x-auto space-x-3 pb-2">
             <button className="px-6 py-3 rounded-full bg-[#DC2626] text-white font-medium hover:bg-red-700 transition-colors whitespace-nowrap">
@@ -400,16 +400,16 @@ const StaticHub = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <div className="bg-[#1F1B4B] border-t border-[#374151] px-6 py-8">
+             {/* Footer */}
+       <div className="bg-gray-900 border-t border-gray-800 px-6 py-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex justify-center space-x-6 mb-6">
-            <div className="p-4 bg-[#374151] rounded-full hover:bg-[#4B5563] transition-colors cursor-pointer">
-              <span className="text-2xl">📤</span>
-            </div>
-            <div className="p-4 bg-[#374151] rounded-full hover:bg-[#4B5563] transition-colors cursor-pointer">
-              <span className="text-2xl">📅</span>
-            </div>
+                         <div className="p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer border border-gray-700">
+               <span className="text-2xl">📤</span>
+             </div>
+             <div className="p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer border border-gray-700">
+               <span className="text-2xl">📅</span>
+             </div>
           </div>
           <p className="text-[#9CA3AF] text-sm">
             Powered by LDS Hub • Última actualización: Diciembre 2024
