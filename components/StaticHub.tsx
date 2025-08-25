@@ -202,13 +202,13 @@ const StaticHub = () => {
        <div className="bg-gray-900 border-b border-gray-800 px-6 py-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex overflow-x-auto space-x-3 pb-2">
-            <button className="px-6 py-3 rounded-full bg-[#DC2626] text-white font-medium hover:bg-red-700 transition-colors whitespace-nowrap">
-              🌟 Todos los locales
-            </button>
+                         <button className="px-6 py-3 rounded-full bg-red-600 text-white font-medium hover:bg-red-700 transition-colors whitespace-nowrap">
+               🌟 Todos los locales
+             </button>
             {locations.map(location => (
               <button
                 key={location.id}
-                className="px-6 py-3 rounded-full bg-[#4B5563] text-[#E5E7EB] font-medium hover:bg-[#6B7280] transition-colors whitespace-nowrap"
+                                 className="px-6 py-3 rounded-full bg-gray-600 text-gray-200 font-medium hover:bg-gray-500 transition-colors whitespace-nowrap"
               >
                 {location.icon} {location.name}
               </button>
@@ -229,7 +229,7 @@ const StaticHub = () => {
             {locations.map(location => (
               <div 
                 key={location.id}
-                className="bg-[#374151] border border-[#4B5563] rounded-xl p-6 hover:bg-[#4B5563] transition-all cursor-pointer"
+                                 className="bg-gray-800 border border-gray-600 rounded-xl p-6 hover:bg-gray-700 transition-all cursor-pointer"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
@@ -271,15 +271,15 @@ const StaticHub = () => {
 
         {/* Vista Detallada de Local Específico (Ejemplo con Río Gallegos) */}
         <div className="mb-8">
-          <div className="bg-[#374151] border border-[#4B5563] rounded-xl p-8">
+                     <div className="bg-gray-800 border border-gray-600 rounded-xl p-8">
             <div className="flex items-start justify-between mb-6">
               <div className="flex items-center space-x-4">
                 <span className="text-4xl">🔥</span>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Río Gallegos</h3>
-                  <span className="px-4 py-2 rounded-full text-sm font-medium text-white bg-[#DC2626]">
-                    Entrega Inmediata
-                  </span>
+                                     <span className="px-4 py-2 rounded-full text-sm font-medium text-white bg-red-600">
+                     Entrega Inmediata
+                   </span>
                 </div>
               </div>
             </div>
@@ -320,14 +320,14 @@ const StaticHub = () => {
             
             {/* Botones de Acción */}
             <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-              <button className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-colors">
-                📍 Cómo llegar
-              </button>
-              <button className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-6 rounded-lg font-medium transition-colors">
+                             <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-medium transition-colors">
+                 📍 Cómo llegar
+               </button>
+                             <button className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-medium transition-colors">
                 <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-5 h-5 inline mr-2" />
                 WhatsApp
               </button>
-              <button className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-6 rounded-lg font-medium transition-colors">
+                             <button className="flex-1 bg-pink-600 hover:bg-pink-700 text-white py-3 px-6 rounded-lg font-medium transition-colors">
                 <img src="/instagram-icon.svg" alt="Instagram" className="w-5 h-5 inline mr-2" />
                 Instagram
               </button>
@@ -342,11 +342,11 @@ const StaticHub = () => {
             {links.map(link => (
               <div
                 key={link.id}
-                className={`relative bg-[#374151] border border-[#4B5563] rounded-xl p-6 ${getPriorityColor(link.priority)} hover:bg-[#4B5563] transition-all cursor-pointer`}
+                                 className={`relative bg-gray-800 border border-gray-600 rounded-xl p-6 ${getPriorityColor(link.priority)} hover:bg-gray-700 transition-all cursor-pointer`}
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4 flex-1">
-                    <div className="p-3 bg-[#4B5563] rounded-lg border border-[#6B7280]">
+                                         <div className="p-3 bg-gray-700 rounded-lg border border-gray-500">
                       <span className="text-2xl">{getTypeIcon(link.type)}</span>
                     </div>
                     <div className="flex-1">
@@ -360,7 +360,7 @@ const StaticHub = () => {
                   
                   <div className="text-right">
                     <div className="text-xs text-[#9CA3AF] font-medium mb-2">{link.clicks} clicks</div>
-                    <div className="w-10 h-10 bg-[#DC2626] rounded-full flex items-center justify-center">
+                                         <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
                       <span className="text-sm font-bold text-white">→</span>
                     </div>
                   </div>
@@ -377,10 +377,10 @@ const StaticHub = () => {
             {contacts.map(contact => (
               <div
                 key={contact.id}
-                className="bg-[#10B981]/20 border border-[#10B981]/30 rounded-xl p-6 flex items-center justify-between hover:bg-[#10B981]/30 transition-all cursor-pointer"
+                                 className="bg-green-900/20 border border-green-700/30 rounded-xl p-6 flex items-center justify-between hover:bg-green-900/30 transition-all cursor-pointer"
               >
                 <div className="flex items-center space-x-4 flex-1">
-                  <div className="w-14 h-14 bg-[#10B981] rounded-full flex items-center justify-center flex-shrink-0">
+                                     <div className="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-7 h-7" />
                   </div>
                   <div className="min-w-0 flex-1">
@@ -389,7 +389,7 @@ const StaticHub = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-2 flex-shrink-0 ml-4">
-                  <div className={`w-3 h-3 rounded-full ${contact.online ? 'bg-[#10B981]' : 'bg-[#6B7280]'}`}></div>
+                                     <div className={`w-3 h-3 rounded-full ${contact.online ? 'bg-green-600' : 'bg-gray-500'}`}></div>
                   <span className="text-xs text-[#9CA3AF] whitespace-nowrap">
                     {contact.online ? 'En línea' : 'Ocupado'}
                   </span>

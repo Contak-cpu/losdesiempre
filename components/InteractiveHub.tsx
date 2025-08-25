@@ -232,11 +232,11 @@ const InteractiveHub = () => {
           <div className="flex overflow-x-auto space-x-2 sm:space-x-3 pb-2 scrollbar-hide">
             <button 
               onClick={() => handleLocationSelect('all')}
-              className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium transition-colors whitespace-nowrap text-sm sm:text-base min-w-fit ${
-                selectedLocation === 'all' 
-                  ? 'bg-[#DC2626] text-white hover:bg-red-700' 
-                  : 'bg-[#4B5563] text-[#E5E7EB] hover:bg-[#6B7280]'
-              }`}
+                             className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium transition-colors whitespace-nowrap text-sm sm:text-base min-w-fit ${
+                 selectedLocation === 'all' 
+                   ? 'bg-red-600 text-white hover:bg-red-700' 
+                   : 'bg-gray-600 text-gray-200 hover:bg-gray-500'
+               }`}
             >
               🌟 Todos los locales
             </button>
@@ -244,11 +244,11 @@ const InteractiveHub = () => {
               <button
                 key={location.id}
                 onClick={() => handleLocationSelect(location.id)}
-                className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium transition-colors whitespace-nowrap text-sm sm:text-base min-w-fit ${
-                  selectedLocation === location.id
-                    ? 'bg-[#DC2626] text-white hover:bg-red-700'
-                    : 'bg-[#4B5563] text-[#E5E7EB] hover:bg-[#6B7280]'
-                }`}
+                                 className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium transition-colors whitespace-nowrap text-sm sm:text-base min-w-fit ${
+                   selectedLocation === location.id
+                     ? 'bg-red-600 text-white hover:bg-red-700'
+                     : 'bg-gray-600 text-gray-200 hover:bg-gray-500'
+                 }`}
               >
                 {location.icon} {location.name}
               </button>
@@ -369,21 +369,21 @@ const InteractiveHub = () => {
               <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:space-x-4">
                 <button 
                   onClick={() => handleMapsClick(selectedLocationData.maps)}
-                  className="flex-1 bg-[#3B82F6] hover:bg-blue-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
+                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
                 >
                   <span className="text-[#E5E7EB] text-lg sm:text-xl">📍</span>
                   <span className="text-sm sm:text-base">Cómo llegar</span>
                 </button>
                 <button 
                   onClick={() => handleWhatsAppClick(selectedLocationData.whatsapp)}
-                  className="flex-1 bg-[#10B981] hover:bg-green-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
                 >
                   <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-5 h-5" />
                   <span className="text-sm sm:text-base">WhatsApp</span>
                 </button>
                 <button 
                   onClick={() => handleInstagramClick(selectedLocationData.instagram)}
-                  className="flex-1 bg-[#EC4899] hover:bg-pink-600 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
+                  className="flex-1 bg-pink-600 hover:bg-pink-700 text-white py-3 px-4 sm:px-6 rounded-lg font-medium transition-colors flex items-center justify-center space-x-2 active:scale-95"
                 >
                   <img src="/instagram-icon.svg" alt="Instagram" className="w-5 h-5" />
                   <span className="text-sm sm:text-base">Instagram</span>
@@ -419,7 +419,7 @@ const InteractiveHub = () => {
                   
                   <div className="text-right flex-shrink-0">
                     <div className="text-xs text-[#9CA3AF] font-medium mb-2">{link.clicks} clicks</div>
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#DC2626] rounded-full flex items-center justify-center">
+                                         <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-600 rounded-full flex items-center justify-center">
                       <span className="text-xs sm:text-sm font-bold text-white">→</span>
                     </div>
                   </div>
@@ -449,7 +449,7 @@ const InteractiveHub = () => {
                   </div>
                 </div>
                 <div className="flex items-center space-x-2 flex-shrink-0 ml-2 sm:ml-4">
-                  <div className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${contact.online ? 'bg-[#10B981]' : 'bg-[#6B7280]'}`}></div>
+                                     <div className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${contact.online ? 'bg-green-600' : 'bg-gray-500'}`}></div>
                   <span className="text-xs text-[#9CA3AF] hidden sm:block whitespace-nowrap">
                     {contact.online ? 'En línea' : 'Ocupado'}
                   </span>
