@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white flex items-center justify-center">
+    <div className="min-h-screen bg-black text-white flex items-center justify-center">
       <div className="text-center">
         {/* Loading Logo */}
         <div className="w-32 h-32 mx-auto mb-8 flex items-center justify-center overflow-hidden shadow-xl shadow-red-500/30 animate-pulse">

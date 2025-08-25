@@ -16,7 +16,7 @@ export default function Error({
   }, [error])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white flex items-center justify-center px-6">
+          <div className="min-h-screen bg-black text-white flex items-center justify-center px-6">
       <div className="text-center max-w-md mx-auto">
         {/* Error Icon */}
         <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center border-2 border-red-500">

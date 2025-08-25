@@ -217,7 +217,7 @@ const LosDeSeimpreHub = () => {
   // Renderizado estático inicial sin interactividad
   if (!isClient) {
     return (
-      <div className="min-h-screen bg-gray-900 text-white">
+      <div className="min-h-screen bg-black text-white">
         {/* Header estático */}
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-red-500/10"></div>
@@ -250,7 +250,7 @@ const LosDeSeimpreHub = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Header */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-red-500/10"></div>
