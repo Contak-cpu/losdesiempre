@@ -165,20 +165,17 @@ const StaticHub = () => {
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             {/* Logo y Título */}
             <div className="flex items-center space-x-4">
-              <div className="w-20 h-20 flex items-center justify-center">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center">
                 <img 
                   src="/lds-logo1.png" 
                   alt="Los de Siempre Logo" 
                   className="w-full h-full object-contain"
-                  width={80}
-                  height={80}
+                  width={128}
+                  height={128}
                 />
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-white">
-                  Los de Siempre
-                </h1>
-                <p className="text-[#E5E7EB] text-lg">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+                <p className="text-2xl sm:text-3xl font-bold text-white">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
               </div>
             </div>
             

@@ -222,19 +222,16 @@ const LosDeSeimpreHub = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-red-500/10"></div>
           <div className="relative px-6 py-8 text-center">
-                      <div className="w-32 h-32 mx-auto mb-4 flex items-center justify-center">
+                      <div className="w-40 h-40 mx-auto mb-4 flex items-center justify-center">
             <img 
               src="/lds-logo1.png" 
               alt="Los de Siempre Logo" 
               className="w-full h-full object-contain"
-              width={128}
-              height={128}
+              width={160}
+              height={160}
             />
           </div>
-            <h1 className="text-3xl font-bold text-red-500 mb-2">
-              Los de Siempre
-            </h1>
-            <p className="text-gray-300 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+            <p className="text-2xl sm:text-3xl font-bold text-red-500 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
             <p className="text-gray-400 text-sm mb-4">Sneakers & Moda • Multi-Local</p>
           </div>
         </div>
@@ -258,19 +255,16 @@ const LosDeSeimpreHub = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-red-500/10"></div>
         <div className="relative px-6 py-8 text-center">
-          <div className="w-32 h-32 mx-auto mb-4 flex items-center justify-center">
+          <div className="w-40 h-40 mx-auto mb-4 flex items-center justify-center">
             <img 
               src="/lds-logo1.png" 
               alt="Los de Siempre Logo" 
               className="w-full h-full object-contain"
-              width={128}
-              height={128}
+              width={160}
+              height={160}
             />
           </div>
-          <h1 className="text-3xl font-bold text-red-500 mb-2">
-            Los de Siempre
-          </h1>
-          <p className="text-gray-300 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+          <p className="text-2xl sm:text-3xl font-bold text-red-500 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
           <p className="text-gray-400 text-sm mb-4">Sneakers & Moda • Multi-Local</p>
           <div className="flex justify-center items-center space-x-4 text-sm text-gray-400">
             <div className="flex items-center space-x-1">

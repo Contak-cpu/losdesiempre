@@ -186,51 +186,48 @@ const InteractiveHub = () => {
   const selectedLocationData = locations.find(loc => loc.id === selectedLocation);
 
   return (
-    <div className="min-h-screen bg-[#2D1B69] text-white">
-      {/* Header Optimizado para Móviles */}
-      <div className="bg-[#1F1B4B] border-b border-[#374151] px-4 sm:px-6 py-6 sm:py-8">
+         <div className="min-h-screen bg-black text-white">
+       {/* Header Optimizado para Móviles */}
+       <div className="bg-gray-900 border-b border-gray-800 px-4 sm:px-6 py-6 sm:py-8">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row sm:justify-between">
-            {/* Logo y Título - Centrado en móviles */}
-            <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-                <img 
-                  src="/lds-logo1.png" 
-                  alt="Los de Siempre Logo" 
-                  className="w-full h-full object-contain"
-                  width={80}
-                  height={80}
-                />
-              </div>
-              <div>
-                <h1 className="text-2xl sm:text-3xl font-bold text-white">
-                  Los de Siempre
-                </h1>
-                <p className="text-[#E5E7EB] text-base sm:text-lg">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
-              </div>
-            </div>
+                         {/* Logo y Título - Centrado en móviles */}
+             <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
+               <div className="w-24 h-24 sm:w-32 sm:h-32 flex items-center justify-center">
+                 <img 
+                   src="/lds-logo1.png" 
+                   alt="Los de Siempre Logo" 
+                   className="w-full h-full object-contain"
+                   width={128}
+                   height={128}
+                 />
+               </div>
+               <div>
+                 <p className="text-xl sm:text-2xl font-bold text-white">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+               </div>
+             </div>
             
-            {/* Stats - Responsive y táctil */}
-            <div className="flex items-center space-x-3 sm:space-x-6 text-center">
-              <div className="bg-[#374151] rounded-lg p-2 sm:p-3 min-w-[60px] sm:min-w-[80px]">
-                <div className="text-xl sm:text-2xl font-bold text-[#10B981]">3</div>
-                <div className="text-xs text-[#E5E7EB]">Locales</div>
-              </div>
-              <div className="bg-[#374151] rounded-lg p-2 sm:p-3 min-w-[60px] sm:min-w-[80px]">
-                <div className="text-xl sm:text-2xl font-bold text-[#3B82F6]">500+</div>
-                <div className="text-xs text-[#E5E7EB]">Modelos</div>
-              </div>
-              <div className="bg-[#374151] rounded-lg p-2 sm:p-3 min-w-[60px] sm:min-w-[80px]">
-                <div className="text-xl sm:text-2xl font-bold text-[#DC2626]">24h</div>
-                <div className="text-xs text-[#E5E7EB]">Envío</div>
-              </div>
-            </div>
+                         {/* Stats - Responsive y táctil */}
+             <div className="flex items-center space-x-3 sm:space-x-6 text-center">
+               <div className="bg-gray-800 rounded-lg p-2 sm:p-3 min-w-[60px] sm:min-w-[80px] border border-gray-700">
+                 <div className="text-xl sm:text-2xl font-bold text-green-400">3</div>
+                 <div className="text-xs text-gray-300">Locales</div>
+               </div>
+               <div className="bg-gray-800 rounded-lg p-2 sm:p-3 min-w-[60px] sm:min-w-[80px] border border-gray-700">
+                 <div className="text-xl sm:text-2xl font-bold text-blue-400">500+</div>
+                 <div className="text-xs text-gray-300">Modelos</div>
+               </div>
+               <div className="bg-gray-800 rounded-lg p-2 sm:p-3 min-w-[60px] sm:min-w-[80px] border border-gray-700">
+                 <div className="text-xl sm:text-2xl font-bold text-red-400">24h</div>
+                 <div className="text-xs text-gray-300">Envío</div>
+               </div>
+             </div>
           </div>
         </div>
       </div>
 
-      {/* Filtros de Navegación - Scroll horizontal en móviles */}
-      <div className="bg-[#1F1B4B] border-b border-[#374151] px-4 sm:px-6 py-3 sm:py-4">
+             {/* Filtros de Navegación - Scroll horizontal en móviles */}
+       <div className="bg-gray-900 border-b border-gray-800 px-4 sm:px-6 py-3 sm:py-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex overflow-x-auto space-x-2 sm:space-x-3 pb-2 scrollbar-hide">
             <button 
@@ -271,11 +268,11 @@ const InteractiveHub = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {locations.map(location => (
-                <div 
-                  key={location.id}
-                  onClick={() => handleLocationSelect(location.id)}
-                  className="bg-[#374151] border border-[#4B5563] rounded-xl p-4 sm:p-6 hover:bg-[#4B5563] transition-all cursor-pointer active:scale-95"
-                >
+                                 <div 
+                   key={location.id}
+                   onClick={() => handleLocationSelect(location.id)}
+                   className="bg-gray-800 border border-gray-700 rounded-xl p-4 sm:p-6 hover:bg-gray-700 transition-all cursor-pointer active:scale-95 shadow-lg hover:shadow-xl"
+                 >
                   <div className="flex items-start justify-between mb-3 sm:mb-4">
                     <div className="flex items-center space-x-2 sm:space-x-3">
                       <span className="text-2xl sm:text-3xl">{location.icon}</span>
@@ -318,7 +315,7 @@ const InteractiveHub = () => {
         {/* Vista Detallada de Local Específico */}
         {selectedLocation !== 'all' && selectedLocationData && (
           <div className="mb-6 sm:mb-8">
-            <div className="bg-[#374151] border border-[#4B5563] rounded-xl p-4 sm:p-8">
+            <div className="bg-gray-800 border border-gray-700 rounded-xl p-4 sm:p-8 shadow-lg">
               <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-4 sm:mb-6 space-y-3 sm:space-y-0">
                 <div className="flex items-center space-x-3 sm:space-x-4">
                   <span className="text-3xl sm:text-4xl">{selectedLocationData.icon}</span>
@@ -404,11 +401,11 @@ const InteractiveHub = () => {
               <div
                 key={link.id}
                 onClick={() => handleLinkClick(link.url)}
-                className={`relative bg-[#374151] border border-[#4B5563] rounded-xl p-4 sm:p-6 ${getPriorityColor(link.priority)} hover:bg-[#4B5563] transition-all cursor-pointer active:scale-95`}
+                                 className={`relative bg-gray-800 border border-gray-700 rounded-xl p-4 sm:p-6 ${getPriorityColor(link.priority)} hover:bg-gray-700 transition-all cursor-pointer active:scale-95 shadow-lg hover:shadow-xl`}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between space-y-3 sm:space-y-0">
                   <div className="flex items-start sm:items-center space-x-3 sm:space-x-4 flex-1">
-                    <div className="p-2 sm:p-3 bg-[#4B5563] rounded-lg border border-[#6B7280] flex-shrink-0">
+                                         <div className="p-2 sm:p-3 bg-gray-700 rounded-lg border border-gray-600 flex-shrink-0">
                       <span className="text-xl sm:text-2xl">{getTypeIcon(link.type)}</span>
                     </div>
                     <div className="flex-1 min-w-0">
@@ -440,10 +437,10 @@ const InteractiveHub = () => {
               <div
                 key={contact.id}
                 onClick={() => handleWhatsAppClick(contact.url)}
-                className="bg-[#10B981]/20 border border-[#10B981]/30 rounded-xl p-4 sm:p-6 flex items-center justify-between hover:bg-[#10B981]/30 transition-all cursor-pointer active:scale-95"
+                                 className="bg-green-900/20 border border-green-700/30 rounded-xl p-4 sm:p-6 flex items-center justify-between hover:bg-green-900/30 transition-all cursor-pointer active:scale-95 shadow-lg hover:shadow-xl"
               >
                 <div className="flex items-center space-x-3 sm:space-x-4 flex-1 min-w-0">
-                  <div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#10B981] rounded-full flex items-center justify-center flex-shrink-0">
+                                     <div className="w-10 h-10 sm:w-14 sm:h-14 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                     <img src="/whatsapp-icon.svg" alt="WhatsApp" className="w-6 h-6" />
                   </div>
                   <div className="min-w-0 flex-1">
