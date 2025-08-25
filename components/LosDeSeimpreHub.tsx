@@ -222,9 +222,15 @@ const LosDeSeimpreHub = () => {
         <div className="relative overflow-hidden">
           <div className="absolute inset-0 bg-red-500/10"></div>
           <div className="relative px-6 py-8 text-center">
-            <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-red-600 flex items-center justify-center">
-              <span className="text-white font-bold text-2xl">LDS</span>
-            </div>
+                      <div className="w-32 h-32 mx-auto mb-4 flex items-center justify-center">
+            <img 
+              src="/lds-logo1.png" 
+              alt="Los de Siempre Logo" 
+              className="w-full h-full object-contain"
+              width={128}
+              height={128}
+            />
+          </div>
             <h1 className="text-3xl font-bold text-red-500 mb-2">
               Los de Siempre
             </h1>
@@ -252,8 +258,14 @@ const LosDeSeimpreHub = () => {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-red-500/10"></div>
         <div className="relative px-6 py-8 text-center">
-          <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-red-600 flex items-center justify-center">
-            <span className="text-white font-bold text-2xl">LDS</span>
+          <div className="w-32 h-32 mx-auto mb-4 flex items-center justify-center">
+            <img 
+              src="/lds-logo1.png" 
+              alt="Los de Siempre Logo" 
+              className="w-full h-full object-contain"
+              width={128}
+              height={128}
+            />
           </div>
           <h1 className="text-3xl font-bold text-red-500 mb-2">
             Los de Siempre
