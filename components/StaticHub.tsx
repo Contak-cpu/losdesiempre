@@ -175,7 +175,7 @@ const StaticHub = () => {
                 />
               </div>
               <div>
-                <p className="text-2xl sm:text-3xl font-bold text-white">🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸</p>
+                <p className="text-lg sm:text-2xl font-bold text-white">🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸</p>
               </div>
             </div>
             
