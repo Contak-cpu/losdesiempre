@@ -193,8 +193,14 @@ const InteractiveHub = () => {
           <div className="flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row sm:justify-between">
             {/* Logo y Título - Centrado en móviles */}
             <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-red-600 flex items-center justify-center border-4 border-[#DC2626]">
-                <span className="text-white font-bold text-xl sm:text-2xl">LDS</span>
+              <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
+                <img 
+                  src="/lds-logo1.png" 
+                  alt="Los de Siempre Logo" 
+                  className="w-full h-full object-contain"
+                  width={80}
+                  height={80}
+                />
               </div>
               <div>
                 <h1 className="text-2xl sm:text-3xl font-bold text-white">

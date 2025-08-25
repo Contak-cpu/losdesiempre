@@ -3,10 +3,14 @@ export default function Loading() {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-black text-white flex items-center justify-center">
       <div className="text-center">
         {/* Loading Logo */}
-        <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-black/90 border-3 border-red-500/60 flex items-center justify-center overflow-hidden shadow-xl shadow-red-500/30 p-1 animate-pulse">
-          <div className="w-full h-full bg-gradient-to-br from-red-600 to-black rounded-full flex items-center justify-center text-white font-bold text-2xl border-2 border-red-500">
-            LDS
-          </div>
+        <div className="w-32 h-32 mx-auto mb-8 flex items-center justify-center overflow-hidden shadow-xl shadow-red-500/30 animate-pulse">
+          <img 
+            src="/lds-logo1.png" 
+            alt="Los de Siempre Logo" 
+            className="w-full h-full object-contain"
+            width={128}
+            height={128}
+          />
         </div>
         
         {/* Loading Text */}
