@@ -188,7 +188,7 @@ const InteractiveHub = () => {
   return (
          <div className="min-h-screen bg-black text-white">
        {/* Header Optimizado para Móviles */}
-       <div className="bg-gray-900 border-b border-gray-800 px-4 sm:px-6 py-6 sm:py-8">
+               <div className="bg-black border-b border-gray-800 px-4 sm:px-6 py-6 sm:py-8">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col items-center space-y-4 sm:space-y-0 sm:flex-row sm:justify-between">
                          {/* Logo y Título - Centrado en móviles */}
@@ -227,7 +227,7 @@ const InteractiveHub = () => {
       </div>
 
              {/* Filtros de Navegación - Scroll horizontal en móviles */}
-       <div className="bg-gray-900 border-b border-gray-800 px-4 sm:px-6 py-3 sm:py-4">
+               <div className="bg-black border-b border-gray-800 px-4 sm:px-6 py-3 sm:py-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex overflow-x-auto space-x-2 sm:space-x-3 pb-2 scrollbar-hide">
             <button 
@@ -461,7 +461,7 @@ const InteractiveHub = () => {
        </div>
 
               {/* Footer - Responsive */}
-        <div className="bg-gray-900 border-t border-gray-800 px-4 sm:px-6 py-6 sm:py-8">
+                 <div className="bg-black border-t border-gray-800 px-4 sm:px-6 py-6 sm:py-8">
          <div className="max-w-4xl mx-auto text-center">
            <div className="flex justify-center space-x-4 sm:space-x-6 mb-4 sm:mb-6">
              <div className="p-3 sm:p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer active:scale-95 border border-gray-700">
