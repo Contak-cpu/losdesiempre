@@ -287,7 +287,7 @@ Esta plataforma representa un **nuevo estándar** para negocios multi-local, com
 
 ---
 
-**🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸**
+**🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸**
 
 *Powered by LDS Hub • Desarrollado por pictoN*
 

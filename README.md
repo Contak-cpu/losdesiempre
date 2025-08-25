@@ -215,6 +215,6 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ---
 
-**Los de Siempre** - 🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸
+**Los de Siempre** - 🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸
 
 *Powered by LDS Hub • Última actualización: ${new Date().toLocaleDateString('es-AR')}*

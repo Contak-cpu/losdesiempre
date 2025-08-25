@@ -26,7 +26,7 @@ export default function ClientWrapper() {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-red-400 via-red-500 to-red-600 bg-clip-text text-transparent mb-2">
             Los de Siempre
           </h1>
-          <p className="text-gray-300 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+          <p className="text-gray-300 mb-2">🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸</p>
           <p className="text-gray-400 text-sm">Cargando...</p>
         </div>
       </div>

@@ -203,7 +203,7 @@ const InteractiveHub = () => {
                  />
                </div>
                <div>
-                 <p className="text-xl sm:text-2xl font-bold text-white">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+                 <p className="text-xl sm:text-2xl font-bold text-white">🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸</p>
                </div>
              </div>
             

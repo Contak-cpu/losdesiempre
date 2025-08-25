@@ -25,7 +25,7 @@ const HeaderForm: React.FC<HeaderFormProps> = ({ currentTime, locations, isStati
               height={160}
             />
           </div>
-          <p className="text-2xl sm:text-3xl font-bold text-red-500 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+          <p className="text-2xl sm:text-3xl font-bold text-red-500 mb-2">🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸</p>
           <p className="text-gray-400 text-sm mb-4">Sneakers & Moda • Multi-Local</p>
         </div>
       </div>
@@ -45,7 +45,7 @@ const HeaderForm: React.FC<HeaderFormProps> = ({ currentTime, locations, isStati
             height={160}
           />
         </div>
-        <p className="text-2xl sm:text-3xl font-bold text-red-500 mb-2">🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸</p>
+        <p className="text-2xl sm:text-3xl font-bold text-red-500 mb-2">🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸</p>
         <p className="text-gray-400 text-sm mb-4">Sneakers & Moda • Multi-Local</p>
         <div className="flex justify-center items-center space-x-4 text-sm text-gray-400">
           <div className="flex items-center space-x-1">

@@ -97,7 +97,7 @@ export default function Error({
         {/* Brand */}
         <div className="mt-6 text-center">
           <p className="text-xs text-gray-600">
-            🩸🏛️ EL TEMPLO DE LAS ZAPAS 🏛️🩸
+            🩸🏛️EL TEMPLO DE LAS ZAPAS🏛️🩸
           </p>
           <p className="text-xs text-gray-600 mt-1">
             Powered by LDS Hub
