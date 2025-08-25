@@ -219,7 +219,7 @@ const LosDeSeimpreHub = () => {
     return (
       <div className="min-h-screen bg-black text-white">
         {/* Header estático */}
-        <div className="relative overflow-hidden">
+        <div className="relative bg-black">
           <div className="absolute inset-0 bg-red-500/10"></div>
           <div className="relative px-6 py-8 text-center">
                       <div className="w-40 h-40 mx-auto mb-4 flex items-center justify-center">
@@ -252,7 +252,7 @@ const LosDeSeimpreHub = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Header */}
-      <div className="relative overflow-hidden">
+      <div className="relative bg-black">
         <div className="absolute inset-0 bg-red-500/10"></div>
         <div className="relative px-6 py-8 text-center">
           <div className="w-40 h-40 mx-auto mb-4 flex items-center justify-center">
@@ -284,7 +284,7 @@ const LosDeSeimpreHub = () => {
       </div>
 
       {/* Location Filter */}
-      <div className="px-6 mb-6">
+      <div className="px-6 mb-6 bg-black">
         <div className="flex overflow-x-auto space-x-3 pb-2">
           <button
             onClick={() => handleLocationSelect('all')}
