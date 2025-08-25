@@ -248,21 +248,21 @@ const StaticHub = () => {
                 
                 <div className="space-y-3 mb-4">
                   <div className="flex items-start space-x-3">
-                    <span className="text-[#E5E7EB] text-lg">📍</span>
-                    <span className="text-[#E5E7EB] text-sm leading-relaxed">{location.address}</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="text-[#E5E7EB] text-lg">🕐</span>
-                    <span className="text-[#E5E7EB] text-sm">Lunes a Sábado: {location.hours}</span>
-                  </div>
-                  {location.subtitle && (
-                    <p className="text-xs text-[#9CA3AF] italic leading-relaxed">{location.subtitle}</p>
-                  )}
-                </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#9CA3AF]">Click para ver más</span>
-                  <div className="text-2xl text-[#DC2626]">→</div>
+                                         <span className="text-gray-300 text-lg">📍</span>
+                     <span className="text-gray-300 text-sm leading-relaxed">{location.address}</span>
+                   </div>
+                   <div className="flex items-center space-x-3">
+                     <span className="text-gray-300 text-lg">🕐</span>
+                     <span className="text-gray-300 text-sm">Lunes a Sábado: {location.hours}</span>
+                   </div>
+                   {location.subtitle && (
+                     <p className="text-xs text-gray-400 italic leading-relaxed">{location.subtitle}</p>
+                   )}
+                 </div>
+                 
+                 <div className="flex items-center justify-between">
+                   <span className="text-xs text-gray-400">Click para ver más</span>
+                   <div className="text-2xl text-red-600">→</div>
                 </div>
               </div>
             ))}
@@ -285,37 +285,37 @@ const StaticHub = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-start space-x-3">
-                <span className="text-[#E5E7EB] text-xl">📍</span>
-                <div>
-                  <p className="text-white font-medium mb-1">Dirección</p>
-                  <p className="text-[#E5E7EB] text-sm leading-relaxed">
-                    Galería Sur 1, Alberdi esquina 9 de julio, Río Gallegos, Santa Cruz
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <span className="text-[#E5E7EB] text-xl">🕐</span>
-                <div>
-                  <p className="text-white font-medium mb-1">Horarios</p>
-                  <p className="text-[#E5E7EB] text-sm">Lunes a Sábado: 9:00 - 21:00</p>
-                  <p className="text-[#9CA3AF] text-xs">Domingos: Cerrado</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center space-x-3">
-                <span className="text-[#E5E7EB] text-xl">📞</span>
-                <div>
-                  <p className="text-white font-medium mb-1">Teléfono</p>
-                  <a 
-                    href="tel:+542966507733"
-                    className="text-[#10B981] text-sm hover:text-green-400 transition-colors"
-                  >
-                    +54 2966 507733
-                  </a>
-                </div>
-              </div>
+                             <div className="flex items-start space-x-3">
+                 <span className="text-gray-300 text-xl">📍</span>
+                 <div>
+                   <p className="text-white font-medium mb-1">Dirección</p>
+                   <p className="text-gray-300 text-sm leading-relaxed">
+                     Galería Sur 1, Alberdi esquina 9 de julio, Río Gallegos, Santa Cruz
+                   </p>
+                 </div>
+               </div>
+               
+               <div className="flex items-center space-x-3">
+                 <span className="text-gray-300 text-xl">🕐</span>
+                 <div>
+                   <p className="text-white font-medium mb-1">Horarios</p>
+                   <p className="text-gray-300 text-sm">Lunes a Sábado: 9:00 - 21:00</p>
+                   <p className="text-gray-400 text-xs">Domingos: Cerrado</p>
+                 </div>
+               </div>
+               
+               <div className="flex items-center space-x-3">
+                 <span className="text-gray-300 text-xl">📞</span>
+                 <div>
+                   <p className="text-white font-medium mb-1">Teléfono</p>
+                   <a 
+                     href="tel:+542966507733"
+                     className="text-green-600 text-sm hover:text-green-400 transition-colors"
+                   >
+                     +54 2966 507733
+                   </a>
+                 </div>
+               </div>
             </div>
             
             {/* Botones de Acción */}
@@ -353,13 +353,13 @@ const StaticHub = () => {
                       <h3 className="font-bold text-lg text-white mb-1">
                         {link.title}
                       </h3>
-                      <p className="text-[#E5E7EB] font-medium mb-2">{link.subtitle}</p>
-                      <p className="text-[#9CA3AF] text-sm">{link.preview}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="text-right">
-                    <div className="text-xs text-[#9CA3AF] font-medium mb-2">{link.clicks} clicks</div>
+                                             <p className="text-gray-300 font-medium mb-2">{link.subtitle}</p>
+                       <p className="text-gray-400 text-sm">{link.preview}</p>
+                     </div>
+                   </div>
+                   
+                   <div className="text-right">
+                     <div className="text-xs text-gray-400 font-medium mb-2">{link.clicks} clicks</div>
                                          <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
                       <span className="text-sm font-bold text-white">→</span>
                     </div>
@@ -385,37 +385,37 @@ const StaticHub = () => {
                   </div>
                   <div className="min-w-0 flex-1">
                     <h3 className="font-semibold text-white text-sm truncate">{contact.title}</h3>
-                    <p className="text-[#E5E7EB] text-sm truncate">{contact.number}</p>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-2 flex-shrink-0 ml-4">
-                                     <div className={`w-3 h-3 rounded-full ${contact.online ? 'bg-green-600' : 'bg-gray-500'}`}></div>
-                  <span className="text-xs text-[#9CA3AF] whitespace-nowrap">
-                    {contact.online ? 'En línea' : 'Ocupado'}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+                                         <p className="text-gray-300 text-sm truncate">{contact.number}</p>
+                   </div>
+                 </div>
+                 <div className="flex items-center space-x-2 flex-shrink-0 ml-4">
+                   <div className={`w-3 h-3 rounded-full ${contact.online ? 'bg-green-600' : 'bg-gray-500'}`}></div>
+                   <span className="text-xs text-gray-400 whitespace-nowrap">
+                     {contact.online ? 'En línea' : 'Ocupado'}
+                   </span>
+                 </div>
+               </div>
+             ))}
+           </div>
+         </div>
+       </div>
 
-             {/* Footer */}
-       <div className="bg-gray-900 border-t border-gray-800 px-6 py-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center space-x-6 mb-6">
-                         <div className="p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer border border-gray-700">
-               <span className="text-2xl">📤</span>
-             </div>
-             <div className="p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer border border-gray-700">
-               <span className="text-2xl">📅</span>
-             </div>
-          </div>
-          <p className="text-[#9CA3AF] text-sm">
-            Powered by LDS Hub • Última actualización: Diciembre 2024
-          </p>
-        </div>
-      </div>
+              {/* Footer */}
+        <div className="bg-gray-900 border-t border-gray-800 px-6 py-8">
+         <div className="max-w-4xl mx-auto text-center">
+           <div className="flex justify-center space-x-6 mb-6">
+                          <div className="p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer border border-gray-700">
+                <span className="text-2xl">📤</span>
+              </div>
+              <div className="p-4 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors cursor-pointer border border-gray-700">
+                <span className="text-2xl">📅</span>
+              </div>
+           </div>
+           <p className="text-gray-400 text-sm">
+             Powered by LDS Hub • Última actualización: Diciembre 2024
+           </p>
+         </div>
+       </div>
     </div>
   );
 };
